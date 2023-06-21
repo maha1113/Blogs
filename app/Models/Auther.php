@@ -9,7 +9,7 @@ class Auther extends Model
 {
     use HasFactory;
 
-    public function post(){
+    public function posts(){
         return $this->hasMany(post::class);
     }
 }

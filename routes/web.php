@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\AutherController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Db\PostController;
+use App\Http\Controllers\NewController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Site1Controller;
 use Illuminate\Support\Facades\Route;
@@ -42,8 +45,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 // Route::get('rtt', [PostController::class, 'abc'] );
 
-// Route::get('posts',[PostController::class, 'index']);
-
+Route::get('news',[PostController::class,'index']);
 // Route::get('authers',[PostController::class, 'auth']);
 
 // Route::get('comments',[PostController::class, 'com']);
@@ -55,3 +57,8 @@ require __DIR__.'/auth.php';
 // Route::get('test',[PostController::class, 'tr']);
 
 // Route::get('info',[PostController::class, 'md']);
+Route::get('/',[ProfileController::class, 'index']);
+Route::get('authers',[AutherController::class, 'all_authers']);
+Route::get('posts',[CommentController::class,'all_posts']);
+Route::get('info',[NewController::class, 'table']);
+Route::get('ad',[NewController::class, 'authers']);

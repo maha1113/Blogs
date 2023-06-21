@@ -3,44 +3,18 @@
 namespace App\Http\Controllers\Db;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\Authenticate;
 use App\Models\Auther;
 use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Psy\CodeCleaner\FunctionReturnInWriteContextPass;
 
 class PostController extends Controller
 {
-
-public function abc(){
-    return 'hello';
-}
-
 public function index(){
-    return Post::all();
+    return $posts = Post::with('auther')->get();
 }
-
-public function auth(){
-    return Auther::all();
-}
-
-public function com(){
-    return Comment::all();
-}
-
-public function db(){
-    return 'hello world';
-}
-
-public function cd(){
-    return 'hello in my web bage';
-}
- public function tr(){
-    return '_____';
- }
-
- public function md(){
-    return 'Newww';
- }
 
 }
