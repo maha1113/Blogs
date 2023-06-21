@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AbcController;
 use App\Http\Controllers\AutherController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Db\PostController;
@@ -45,20 +46,44 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 // Route::get('rtt', [PostController::class, 'abc'] );
 
-Route::get('news',[PostController::class,'index']);
-// Route::get('authers',[PostController::class, 'auth']);
+// Route::get('news',[PostController::class,'index']);
+// // Route::get('authers',[PostController::class, 'auth']);
 
-// Route::get('comments',[PostController::class, 'com']);
+// // Route::get('comments',[PostController::class, 'com']);
 
-// Route::get('user',[PostController::class, 'db']);
+// // Route::get('user',[PostController::class, 'db']);
 
-// Route::get('file',[PostController::class, 'cd']);
+// // Route::get('file',[PostController::class, 'cd']);
 
-// Route::get('test',[PostController::class, 'tr']);
+// // Route::get('test',[PostController::class, 'tr']);
 
-// Route::get('info',[PostController::class, 'md']);
-Route::get('/',[ProfileController::class, 'index']);
-Route::get('authers',[AutherController::class, 'all_authers']);
-Route::get('posts',[CommentController::class,'all_posts']);
-Route::get('info',[NewController::class, 'table']);
-Route::get('ad',[NewController::class, 'authers']);
+// // Route::get('info',[PostController::class, 'md']);
+// Route::get('/',[ProfileController::class, 'index']);
+// Route::get('authers',[AutherController::class, 'all_authers']);
+// Route::get('posts',[CommentController::class,'all_posts']);
+// Route::get('info',[NewController::class, 'table']);
+// Route::get('ad',[NewController::class, 'authers']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('last',[AbcController::class, 'new']);
+
+
+
+
