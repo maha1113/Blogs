@@ -15,8 +15,10 @@ class ComController extends Controller
         echo"<br>";
         echo"-----";
         echo"<br>";
+        echo "description :" . $comments->description;
+        echo"<br>";
+        echo"-----";
+        echo"<br>";
       }
-
-
     }
 }
