@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AbcController;
 use App\Http\Controllers\AutherController;
+use App\Http\Controllers\ComController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Db\PostController;
 use App\Http\Controllers\NewController;
@@ -57,12 +58,12 @@ require __DIR__.'/auth.php';
 
 // // Route::get('test',[PostController::class, 'tr']);
 
-// // Route::get('info',[PostController::class, 'md']);
-// Route::get('/',[ProfileController::class, 'index']);
-// Route::get('authers',[AutherController::class, 'all_authers']);
-// Route::get('posts',[CommentController::class,'all_posts']);
-// Route::get('info',[NewController::class, 'table']);
-// Route::get('ad',[NewController::class, 'authers']);
+// Route::get('info',[PostController::class, 'md']);
+Route::get('/',[ProfileController::class, 'index']);
+Route::get('authers',[AutherController::class, 'all_authers']);
+Route::get('posts',[CommentController::class,'all_posts']);
+Route::get('info',[NewController::class, 'table']);
+Route::get('ad',[NewController::class, 'authers']);
 
 
 
@@ -83,6 +84,7 @@ require __DIR__.'/auth.php';
 
 
 Route::get('last',[AbcController::class, 'new']);
+Route::get('po',[ComController::class, 'info']);
 
 
 

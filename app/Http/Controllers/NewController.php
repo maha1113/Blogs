@@ -23,11 +23,11 @@ class NewController extends Controller
         }
 
     }
-    public function authers() {
-        $auther = Auther::all();
-        foreach($auther as $auther){
-            echo "name :" .$auther->name;
-            echo "<br>";
+     public function authers() {
+         $auther = Auther::all();
+          foreach($auther as $auther){
+             echo "name :" .$auther->name;
+             echo "<br>";
             echo "-------";
             echo "<br>";
             echo "age :" . $auther->age;
@@ -36,4 +36,6 @@ class NewController extends Controller
             echo "<br>";
         }
     }
+
+
 }
